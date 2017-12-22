@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import { Header } from "./components";
-import { Dashboard } from "./pages";
+import { Header, Dashboard } from "./components";
+import { HomePage } from "./pages";
 import './App.css';
 
 const Wrapper = styled.div``;
 const Page = styled.div`
   width: 1000px;
-  margin: 15px auto;
+  margin: 30px auto;
 `
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
       <Wrapper>
       <Header />
         <Page>
-        <Dashboard/>
+        <HomePage/>
         </Page>
       </Wrapper>
     );
