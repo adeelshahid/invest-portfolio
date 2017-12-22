@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 `
 
 const Icon = styled.div`
+  cursor: pointer;
   position: relative;
   margin-right: 30px;
 `
