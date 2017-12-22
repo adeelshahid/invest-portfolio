@@ -42,9 +42,25 @@ const Delta = styled.span`
   color: ${p => (p.change > 0 ? "#75DF75" : "#f00")};
 `;
 
+const LabelWithColor = styled.span`
+  position: relative;
+  padding-left: 30px;
+  
+  &:before {
+    content: ' ';
+    position: absolute;
+    left: 0;    
+    width: 20px;
+    height: 20px;
+    background-color: ${p => p.color};
+  }
+`;
+
 function formatValue(value, format, row) {
   if (format === FMT_COLOR_INDICATOR) {
-    return value;
+    return (
+      <LabelWithColor color={row.color}>{value}</LabelWithColor>
+    );
   } else if (format === FMT_NUMBER) {
     return new Intl.NumberFormat("nn").format(value);
   } else if (format === FMT_DECIMAL) {
